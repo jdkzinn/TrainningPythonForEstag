@@ -10,6 +10,6 @@ else:
 print(type(name))
 
 a  = 10
-b = 'Sol'
+b = 'Lua'
 
 print(isinstance(b, int)) # Se for int, retorna True, se não, retorna False!
