@@ -5,7 +5,7 @@ z = x + y
 print('A soma de x + y é:', z)
 
 # Desafio: melhore o código do exercício anterior, de modo que ele exiba além da soma: a subtração, a multiplicação,
-# a divisão, módulo (%), o primeiro elevao ao segundo. Entre os valores x e y digitados pelo usuário.
+# a divisão, módulo (%), o primeiro elevao ao segundo (Exponenciação). Entre os valores x e y digitados pelo usuário.
 
 soma = x + y
 subtracao = x - y
