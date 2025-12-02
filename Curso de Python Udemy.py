@@ -13,3 +13,11 @@ a  = 10
 b = 'Lua'
 
 print(isinstance(b, int)) # Se for int, retorna True, se não, retorna False!
+
+num1 = 15
+num2 = 150
+num3 = num1 * num2
+print(num3)
+
+
+
