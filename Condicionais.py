@@ -17,7 +17,7 @@ elif (media >= 7):
     print("Parabéns, você está aprovado!")
 elif (media >=5):
     print(f"Esta foi sua nota média: {media:.2f}")
-    print("Tente melhorar no próximo bimestre, você está de recuperação.")
+    print("Tente melhorar no próximo bimestre, você  está de recuperação.")
 else:
     print(f"Esta foi sua nota média: {media:.2f}")
     print("Lamentamos muito, você está reprovado.")
