@@ -26,18 +26,18 @@ for i in range(1, 16):
 
 import numpy as np  # pyright: ignore[reportMissingImports]
 
-a=np.array([1,1,1,1,1])
+a = np.array([1,1,1,1,1])
 
-sum = a+10
+sum = a + 10
 print(sum)
 
-V={'A','B','C' }
+V = {'A','B','C' }
 V.add('C')
 print(V)
 
 x="Go"
 
-if(x=="Go"):
+if(x == "Go"):
     print('Go ')
 else:
     print('Stop')
@@ -45,7 +45,7 @@ else:
 print('Mike')
 
 
-A=['1','2','3']
+A = ['1','2','3']
 
 for a in A:
     print(2*a)
@@ -68,8 +68,8 @@ class Points(object):
     def print_point(self):
         print('x=',self.x,' y=',self.y)
 
-p2=Points(1,2)
+p2 = Points(1,2)
 
-p2.x=2
+p2.x = 2
 
 p2.print_point()
