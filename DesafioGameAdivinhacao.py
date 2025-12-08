@@ -14,7 +14,7 @@ if __name__ == '__main__':
         print(f'\nBem vindo ao jogo de adivinhação do DK')
         print(f'Você terá 3 tentativas, use-as com sabedoria!')
 
-        numeroSorteado = random.randint(1, 15) # gerando número aletório
+        numeroSorteado = random.randint(1, 15) # gerando número aletório ente 1 e 15
         tentativas = 3  # Resetar tentativas para cada novo jogo
         acertou = False
 
