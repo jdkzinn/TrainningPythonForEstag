@@ -54,3 +54,12 @@ if __name__ == '__main__':
     resultados = quadrado(valores)
     for g in resultados:
         print(g)
+
+def contar (num = 0, caractere = ''):
+    for i in range(1, num):
+        print(caractere)
+
+if __name__ == '__main__':
+    contar(6, 'DK')
+
+
