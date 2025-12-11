@@ -1,5 +1,6 @@
 # Crie um programa que pergunte o nome do usuário, idade, empresa/cargo que trabalha e seu hobby
 # Após isso, trate com try, execpt, if/elif/else e finnaly (se aplicável)
+import os
 
 def coletarDados():
     listarDados = [] # Colchete vazio
@@ -41,3 +42,5 @@ if __name__ == '__main__':
         dadosPessoa = dadosPessoa.lower() # Não sabemos se o usuário irá utilizar CAPSLOCK ou NÃO.
         if dadosPessoa != 's':
             print(f'Até a próxima, amigo(a)!\n')
+        
+        os.system('cls')
