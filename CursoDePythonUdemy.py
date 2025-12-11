@@ -3,7 +3,7 @@ work = "Application Developer"
 age = 27
 
 if name == "Deryk Silva" and work == "Application Developer" and age == 27:
-    print("Seu nome é Deryk Silva, você é um Application Developer e tem 27 anos de idade.")
+    print(f"Seu nome é {name}, você é um {work} e tem {age} anos de idade.")
 else:
     print("Olá desconhecido!")
 
