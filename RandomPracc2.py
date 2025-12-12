@@ -102,7 +102,7 @@ if __name__ == '__main__':
 
             # Forma de pagamento e aplicabilidade do desconto
 
-            paymentMethod = input(f'Qual a forma de pagamento? (pix/dinheiro/debito/credito) ->').strip().lower()
+            paymentMethod = input(f'Qual a forma de pagamento? (pix/dinheiro/debito/credito) -> ').strip().lower()
             applyDiscount = paymentMethod in ['pix', 'dinheiro']
 
             if applyDiscount:
