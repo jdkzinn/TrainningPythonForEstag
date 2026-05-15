@@ -38,7 +38,7 @@ if __name__ == '__main__':
                 sell = aliases.get(sell, sell) # Aplica alias se existir
             
             if sell not in products:
-                print(f'Digite um produto válido')
+                print(f'\nDigite um produto válido\n')
                 continue
             
             while True:
@@ -64,10 +64,10 @@ if __name__ == '__main__':
                 'valor' : parcialValue
             })
             totalValue += parcialValue
-            print(f'Adicionado: {sell} x {quantity} - Total: {totalValue} R$')
+            print(f'\nAdicionado: {sell} x {quantity} - Total: {totalValue} R$')
             print(f'\nValor do carrinho atual: {totalValue:.2f} R$\n')
-
-        # Perguntando se deseja adicionar outro produto        
+        
+        # Perguntando se deseja adicionar outro produto
         
             answerSell = input(f'Deseja adicionar outro produto? (S/N)').strip().lower()
             if answerSell in ["n", "no","nao", "não"]:
