@@ -18,13 +18,13 @@ Módulo 1: A Lente do Detetive (QA Mindset)
 
             - O que seria o "fechar a tampa com força" (Stress)?  
             R: Acredito que seria forçar vários envios iguais, para verificar duplicidade, testar o que
-                aconteceria com o sistema com esse teste de "stress" forçao.
+                aconteceria com o sistema com esse teste de "stress" forçado.
 
     Exercício 3
         => Acesse um site de notícias. Tente mudar o zoom do seu navegador para 200%.
             - O texto ficou em cima do outro?
             - O botão de fechar a propaganda sumiu da tela?
-            R: No site que testei, sim. Tanto a funcionalidade quanto a qualidade foram mantidas!
+            R: No site que testei, não. Tanto a funcionalidade quanto a qualidade foram mantidas!
                 Site utilizado: hltv.org (site de notícias do cenário competitivo de cs2)
 
     Checklist SEMANA 1
@@ -35,7 +35,7 @@ Módulo 1: A Lente do Detetive (QA Mindset)
             [X] Entendi que a Heurística CRUD serve para quase tudo.
             [X] Fiz o exercício da garrafa mentalmente com pelo menos 3 objetos da minha casa.
                 (mesa, geladeira, capinha de celular)
-            [] Tenho uma lista de 3 perguntas "bobas" para fazer ao meu mentor na próxima reunião
+            [ ] Tenho uma lista de 3 perguntas "bobas" para fazer ao meu mentor na próxima reunião
 
 Módulo 2: A Arte do Reporte (Comunicando o Invisível)
     Exercício 1 (Tradutor de bugs)
