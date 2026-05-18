@@ -1,0 +1,187 @@
+Módulo 1: A Lente do Detetive (QA Mindset)
+    Exercício 1
+        => Imagine que você está testando uma calculadora e, 2 + 2 = 5
+            1. Como você prova que isso está errado
+            2. Quais documentos ou fontes você consultaria?
+
+        R: Primeiro que pesquisaria sobre a operação em algum manual para ter certeza que aquele tipo de
+            execução está correto e se era para trazer aquele resultado, posteriormente com o entendimento da
+            análise realizada, provaria se aquilo estava errado ou não.
+
+    Exercício 2
+        => Escolha o campo de "Nome" em um formulário de cadastro qualquer. Aplique a lógica da garrafa:
+            - O que seria o "encher demais" (Limite)? 
+            R: Sim, seria por exemplo testar quantos caracteres o campo aceitaria.
+            
+            - O que seria o "colocar líquido fervendo" (Exceção)?
+            R: Seria por exemplo tentar colocar números no lugar do nome, caracteres especiais e etc...
+
+            - O que seria o "fechar a tampa com força" (Stress)?  
+            R: Acredito que seria forçar vários envios iguais, para verificar duplicidade, testar o que
+                aconteceria com o sistema com esse teste de "stress" forçao.
+
+    Exercício 3
+        => Acesse um site de notícias. Tente mudar o zoom do seu navegador para 200%.
+            - O texto ficou em cima do outro?
+            - O botão de fechar a propaganda sumiu da tela?
+            R: No site que testei, sim. Tanto a funcionalidade quanto a qualidade foram mantidas!
+                Site utilizado: hltv.org (site de notícias do cenário competitivo de cs2)
+
+    Checklist SEMANA 1
+        => Marque se conseguir:
+
+            [X] Consigo explicar a diferença entre teste positivo e teste negativo?
+                Acredito que sim (tenho que pensar para responder bem)
+            [X] Entendi que a Heurística CRUD serve para quase tudo.
+            [X] Fiz o exercício da garrafa mentalmente com pelo menos 3 objetos da minha casa.
+                (mesa, geladeira, capinha de celular)
+            [] Tenho uma lista de 3 perguntas "bobas" para fazer ao meu mentor na próxima reunião
+
+Módulo 2: A Arte do Reporte (Comunicando o Invisível)
+    Exercício 1 (Tradutor de bugs)
+        => Abaixo está uma reclamação real de um usuário bravo. Transforme isso em um Bug
+            Report Profissional (Título, Passos, Esperado e Atual).
+            
+            "Pô, tentei colocar minha foto no perfil e o app simplesmente fechou sozinho! Tentei
+            três vezes e nada, maior porcaria."
+            
+            R: 
+                Título: Usuário não consegue adicionar foto de perfil
+                Passos: Clique no MENU ou ÍCONE de PERFIL, clique em editar, clique em adicionar foto
+                        escolha sua foto, clique em enviar.
+                Resultado esperado: Mensagem de "foto de perfil atualizada com sucesso" e reload automático 
+                        da página/app.
+                Resultado atual: Aplicativo fecha sozinho, forçando o usuário a abri-lo novamwente.
+
+    Exercício 2 (Evidência)
+        => Tire um print de qualquer site. Agora, usando ferramentas simples (como o Paint ou o
+            seletor do Windows), faça uma marcação indicando um "erro imaginário".
+
+            R: Foto salva na máquina local, envio se precisar.
+
+    Exercício 3 (Prioridade e Severidade)
+        => Nem todo bug é urgente. Diferencie:
+            - Severidade: O impacto técnico (O app caiu?)
+             R: Sistema continua funcionando, porém, gerando um desconforto ao usuário que não consegue
+                visualizar sua foto de perfil e, não consegue filtrar a busca por vídeos que queira.
+
+            - Prioridade: A urgência para o negócio (O erro é no botão de "Comprar" ou no
+                rodapé que ninguém lê?).
+             R: Prioridade altíssima, pois está impactando diretamente em como o sistema deve funcionar
+                para o usuário.
+
+            - Desafio: Um erro de digitação no nome do CEO na página inicial é Alta
+                Severidade ou Alta Prioridade? Por quê?
+             R: Acredito que ambas, pois isso pois se isso passou de homologação para produção,
+                é meio que um "alerta" para que mais erros tenham passado despercebidos, já que um
+                erro visual desse tamanho passou.
+    
+    Checklist SEMANA 2:
+        => Marque se conseguir:
+            [X] Sei a diferença de resultado esperado e resultado atual? 
+            [X] Consigo escrever um passo a passo sem usar palavras complicadas.
+            [X] Entendi que evidência serve para poupar tempo (meu e do dev).
+            [X] Completei o exercício de "Tradutor de Bugs".
+
+Módulo 3: O Estrategista de Testes
+
+importante:
+
+Cenário de Teste: É o "O QUE". (Ex: Testar o login).
+• Caso de Teste: É o "COMO". (Ex: Testar login com senha inválida, com e-mail
+vazio, etc).
+Analogia da Garrafa: > * Cenário: Verificar a resistência da garrafa.
+• Casos de Teste: 1. Derrubar de 1 metro; 2. Derrubar de 2 metros; 3. Derrubar
+vazia; 4. Derrubar cheia.
+
+    => Exercício 1: Decomposição (Cenário -> caso)
+        Escolha a funcionalidade "Esqueci minha senha".
+        - Liste 1 cenário de teste.
+            R: Verificar se a funcionalidade do botão está correta
+        - Desdobre esse cenário em 3 CASOS DE TESTE diferentes (um fez, um triste e um alternativo)
+            R:
+                Feliz => Usuário clicou e conseguiu redefinir sua senha sem problemas
+                Triste => Usuário clicou e não foi redirecionado para redefinição da senha e/ou
+                    sistema fecha sozinho.
+                Alternativo => Ao ir por outra rota, ex: www.example/teste o usuário consegue redefinir
+                    sua senha normalmente, mas na rota principal de login não consegue.
+
+                Resultado esperado: O usuário deve ser redirecionado para uma página na qual o mesmo
+                    insira o seu e-mail para que chegue no mesmo o link para redefinição de senha.
+                Rsultado atual: Usuário não consegue chegar na pagina para inserção do e-mail e/ou
+                    o sistema fecha sozinho.
+                
+    => Exercício 2: O Tradutor de Gherkin (BDD)
+        Escreva em formato Dado/Quando/Então o seguinte comportamento: "O usuário
+         tenta sacar 500 reais no caixa eletrônico, mas ele só tem 200 de saldo. O sistema deve
+         mostrar uma mensagem de erro e não entregar o dinheiro."
+            R:
+            - Dado que o usuário está tentando sacar o valor de 500,00 R$ em um caixa eletrônico
+            - Quando ele tem um saldo menor que o valor informado no saque
+            - Então o sistema deve retornar uma mensagem de erro, ex: saldo indisponível para este saque
+
+    => Exercício 3: O Desafio da Garrafa BDD
+        Crie um cenário de BDD para testar a Vedação da Garrafa.
+        Dica: Use o "Quando" para a ação de virar a garrafa de ponta-cabeça.
+            R Negativo:
+             - Dado que a garrafa não deve vazar sem ação humana
+             - Quando ela gira diagonalmente ou de ponta cabeça e está cheia (500ml)
+             - Então a garrafa começa a vazar moderadamente 1 pingo a cada 4 segundos.
+            R Positivo:
+             - Dado que a garrafa está cheia e não deve vazar sem ação humana
+             - Quando ela gira de ponta-cabeça ou diagonalmente
+             - Então a garrafa não deve apresentar vazamentos e a tampa deve permanecer firme.
+    
+    Checklist semana 3:
+        [X] Sei diferenciar Cenário de casos de teste?
+        [X] Escrevi meu primeiro BDD sem usar termos técnicos (como "clicar no
+            botão")
+        [X] Identifiquei caminhos felizes e tristes em uma funcionalidade real.
+        [X] Entendi que o BDD serve para o time todo entender o que o software faz.
+
+Módulo 4: Aprofundando em Cenários, Casos e BDD
+    => Exercício 1: Transformando a Garrafa
+        Você precisa testar a Vedação da Garrafa.
+        - Escreva um Caso de Teste Tradicional (Passo 1, Passo 2...) focado em encher a
+        garrafa e virar de cabeça para baixo.
+         R: Preencho a garrafa com 300ML e viro de ponta-cabeça, depois adiciono mais 100ML e faço o mesmo,
+         por fim adiciono mais 100ML e viro novamente de ponta-cabeça.
+
+        - Escreva um BDD para essa mesma situação usando Dado/Quando/Então.
+            R:
+            Dado que a garrafa está cheia (500ML) e fechada firmemente
+            Quando eu viro garrafa de ponta-cabeça com ela cheia e bem fechada
+            Então a garrafa não deve apresentar vazamentos e a tampa deve permanecer firme.
+
+    => Exercício 2: O Cenário do E-commerce
+        Imagine que você trabalha no site da Amazon. O cenário é: Adicionar produto ao
+        carrinho.
+        Crie 2 BDDs para esse cenário
+         - Um para quando o usuário está logado.
+         - Um para quando o usuário não está logado (O que deve acontecer? Ele
+           vai para o login?).
+         R positivo:
+            - Dado que o usuário está logado
+            - Quando ele adiciona um produto ao carrinho e clica em finalizar compra
+            - Então o site o redireciona para coleta de dados e finalização de pagamento
+         R negativo:
+            - Dado que o usuário não está logado
+            - Quando ele adiciona um produto ao carrinho o sistema não deve encaminhá-lo diretamente
+              para a tela de login, pois ele pode querer adicionar mais produtos. Essa ação deve ser
+              realizada no momento em que usuário desejar "finalizar pagamento".
+            - Então o usuário é redirecionado a tela de login e posteriormente para tela de coleta de dados
+              e finalização de pagamento.
+
+    => Exercício 3: O Detetive de BDD
+        O BDD abaixo está mal escrito. Consegue descobrir o erro?
+         - Dado que eu abro o Chrome
+         - E digito www.google.com
+         - Então os resultados aparecem.
+
+         R: o BDD deve focar no que o usuário quer fazer e o resultado da ação realizada.
+
+         Corrigido:
+         - Dado que o usuário quer filtrar uma pesquisa pelo google
+         - Quando o mesmo insere o filtro desejado no campo de pesquisa
+         - Então o sistema deve retornar o resultado de acordo com o filtro informado.
+

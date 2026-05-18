@@ -17,7 +17,7 @@ def soma(a, b):
     print(a + b)
 soma(10, 17)  # Estou somando com a função "soma" que calcua A + B (1° e 2° posições)
 
-# Outro exemplo:
+# Outro exemplo:m
 
 def mult(x, y):
     return x * y
