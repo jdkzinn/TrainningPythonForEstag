@@ -1,3 +1,4 @@
+# coding: utf-8
 cars = [
     {
         "modelo" : "GTR NISMO",
@@ -15,7 +16,7 @@ cars = [
         "modelo" : "URUS",
         "marca" : "LAMBORGHINI",
         "ano" : 2023,
-        "preco" : 1_100_000.00
+        "preco" : 1_000_000.00
     },
     {
         "modelo" : "SUPRA",
@@ -25,10 +26,23 @@ cars = [
     }
 ]
 
-for car in cars:
-    print(f"Modelo: {car['modelo']} | Marca: {car['marca']}")
+contador2022 = 0
+contador2024 = 0
+carros2022 = []
+carros2024 = []
 
-print(f"\nCarros com preço acima de R$600.000,00:\n")
 for car in cars:
-    if car['preco'] >= 600_000.00:
-        print(f"Carro: {car['modelo']} | Preço: R${car['preco']:.2f}")
+    if car['ano'] == 2022:
+        contador2022 += 1
+        carros2022.append(car)
+    elif car['ano'] == 2024:
+        contador2024 += 1
+        carros2024.append(car)
+
+print(f"\nQuantidade de carros do ano 2022: {contador2022}") 
+for car in carros2022:
+    print(f" - {car['modelo']}")
+
+print(f"Quantidade de carros do ano 2024: {contador2024}")
+for car in carros2024:
+    print(f" - {car['modelo']}")
